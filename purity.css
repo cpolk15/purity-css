@@ -1,0 +1,99 @@
+/*@keyframes rotate {
+  0% {
+    transform: rotateY(0deg) skewX(-10deg) skewY(-30deg);
+  }
+  50% {
+    transform: rotateY(180deg) skewX(-10deg) skewY(-30deg);
+  }
+  100% {
+    transform: rotateY(360deg) skewX(-10deg) skewY(-30deg);
+  }
+}*/
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(180deg) skewX(-10deg) skewY(-30deg);
+  }
+  100% {
+    transform: rotateY(360deg) skewX(-10deg) skewY(-30deg);
+  }
+}
+
+@keyframes CharRotate {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(-1);
+  }
+}
+body {
+  background-color: lightblue;
+}
+
+div.image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #2391ff;
+  width: 200px;
+  height: 400px;
+  margin: -200px 0px 0px -100px;
+}
+
+.flex-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 300px;
+  margin: -150px 0px 0px -100px;
+}
+
+.box {
+  height: 50px;
+  width: 220px;
+  margin: 5px 0;
+  border: 1px solid black;
+  animation-name: rotate;
+  animation-duration: 6s;
+  transform: skewX(-10deg) skewY(-30deg);
+  animation-timing-function: linear;
+}
+
+#red {
+  border-color: red;
+}
+
+#blue {
+  border-color: blue;
+}
+
+#yellow {
+  border-color: yellow;
+}
+
+.title {
+  position: absolute;
+  font-family: "Commissioner", sans-serif;
+  font-size: 30px;
+  font-weight: 282;
+  text-align: justify;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  text-transform: uppercase;
+  margin: 10px 0 0 -50px;
+}
+
+.title > span {
+  animation-name: CharRotate;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  display: inline-block;
+  transform: scaleX(-1);
+}
