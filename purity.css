@@ -9,6 +9,7 @@
     transform: rotateY(360deg) skewX(-10deg) skewY(-30deg);
   }
 }*/
+/*^^ IF I CHOOSE TO HAVE INFINITE ROTATING STRIPE ANIMATIONS*/
 
 @keyframes rotate {
   0% {
@@ -29,6 +30,16 @@
 }
 body {
   background-color: lightblue;
+}
+
+@keyframes expand {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    letter-spacing: 20px;
+    opacity: 1;
+  }
 }
 
 div.image {
@@ -54,7 +65,7 @@ div.image {
   margin: -150px 0px 0px -100px;
 }
 
-.box {
+.stripe {
   height: 50px;
   width: 220px;
   margin: 5px 0;
@@ -79,21 +90,21 @@ div.image {
 
 .title {
   position: absolute;
+  display: flex;
+  justify-content: center;
   font-family: "Commissioner", sans-serif;
   font-size: 30px;
   font-weight: 282;
-  text-align: justify;
-  position: absolute;
   top: 75%;
   left: 50%;
   text-transform: uppercase;
-  margin: 10px 0 0 -50px;
+  margin: 10px 0 0 -100px;
+  animation: expand 6s ease-out forwards 1;
 }
 
 .title > span {
-  animation-name: CharRotate;
-  animation-duration: 6s;
-  animation-timing-function: linear;
-  display: inline-block;
+  animation: CharRotate 6s linear forwards 1;
+  text-align: center;
+  /*letter-spacing: 20px;*/
   transform: scaleX(-1);
 }
