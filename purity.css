@@ -22,10 +22,10 @@
 
 @keyframes CharRotate {
   0% {
-    transform: scaleX(1);
+    transform: rotateY(0deg);
   }
   100% {
-    transform: scaleX(-1);
+    transform: rotateY(180deg);
   }
 }
 body {
@@ -34,6 +34,7 @@ body {
 
 @keyframes expand {
   0% {
+    letter-spacing: normal;
     opacity: 0;
   }
   100% {
@@ -100,11 +101,13 @@ div.image {
   text-transform: uppercase;
   margin: 10px 0 0 -100px;
   animation: expand 6s ease-out forwards 1;
+  letter-spacing: 20px;
 }
 
 .title > span {
   animation: CharRotate 6s linear forwards 1;
-  text-align: center;
-  /*letter-spacing: 20px;*/
-  transform: scaleX(-1);
+  display: flex;
+  justify-content: center;
+  margin: 0 20px 0 -25px;
+  padding: 0 0 0 0;
 }
