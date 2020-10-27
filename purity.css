@@ -23,22 +23,25 @@
 @keyframes CharRotate {
   0% {
     transform: rotateY(0deg);
+    margin: 0 0px 0 -5px;
   }
   100% {
     transform: rotateY(180deg);
+    margin: 0 20px 0 -25px;
   }
 }
+
 body {
   background-color: lightblue;
 }
 
 @keyframes expand {
   0% {
-    letter-spacing: normal;
+    /*letter-spacing: normal;*/
     opacity: 0;
   }
   100% {
-    letter-spacing: 20px;
+    /*letter-spacing: 20px;*/
     opacity: 1;
   }
 }
